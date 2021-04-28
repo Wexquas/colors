@@ -1,0 +1,236 @@
+/*       общие классы              */
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+html{
+  
+  scroll-behavior: smooth;
+  /*box-sizing: border-box;*/
+}
+
+body {
+    /*background-color: #000000;*/
+    font-family: NotoSansRegular ,sans-serif;
+    
+    
+  }
+  
+
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  ul {
+    list-style: none; /*убираем маркеры списка*/
+  }
+
+
+header{
+    z-index: 2;
+    height: 65px;
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.2);
+    /*background-color: rgb(189, 189, 189);*/
+    
+}
+
+.headerWrap{
+  
+  height: 65px;
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: brown;*/
+  
+}
+.mobileMenu{
+  display: none;
+}
+
+.addNav{ 
+  width: 120px;
+  /*background-color: seagreen;*/
+  text-align: center;
+}
+
+.logoWrap{
+  height: 32px;
+  
+}
+
+.red{
+  color: #F03033;
+}
+
+.navWrap{
+  flex-basis: 370px;
+  
+}
+
+.menu-main{ /* горизонтальное меню*/
+  
+  display: flex;
+  /*background-color: cyan;*/
+  justify-content: space-between;
+  
+}
+
+
+.menu-main li:nth-child(n+2)::before{
+  content: " ";
+  background: #C4C4C4;
+  width: 1px;
+  height: 10px;
+  float: left;
+  margin: 5px 25px 0 0;
+}
+
+.addNav{
+  white-space: nowrap;
+}
+
+.headerWrap > div:nth-child(3){
+  
+  
+}
+
+.headerWrap > div:nth-child(3)::before{
+  content: url(/img/iconPhone.svg);
+  float: left;
+  margin: 2px 0px 0 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.headerWrap > div:nth-child(4)::before{
+  content: url(/img/iconMap.svg);
+  float: left;
+  margin: 2px 10px 0 0px;
+  padding: 0 0 3px 0;
+  width: 16px;
+  height: 13px;
+  background-color: #F03033;
+  border-radius: 50%;
+}
+
+.menu-main li{
+  
+  
+  text-align: center;
+}
+.mobile_icon{
+  display: none;
+}
+
+/*//////////////////////////////////////////////////*/
+
+.mainContent1{
+  z-index: 1;
+  position: relative;
+  height: 570px;
+  background: url(/img/city.png);
+  /*background-size: cover;*/
+  box-shadow: inset 0px -400px 50px -13px rgba(255, 255, 255, 0.6);
+
+
+}
+
+
+/* 1280p */
+@media screen and (max-width: 1280px){
+  .headerWrap{
+    width: auto;
+    margin-left: 20px;
+  }
+
+
+
+
+}
+
+/* 720p */
+@media screen and (max-width: 900px){
+  .addNav{
+    display: none;
+  }
+  .headerWrap{
+    justify-content: space-around;
+    margin: 0;
+  }
+
+
+
+
+}
+
+/* 540p */
+@media screen and (max-width: 540px){
+  body{
+    overflow: hidden;
+  }
+  .navWrap{
+    flex-basis: auto;
+  }
+  .menu-main{
+    display: none;
+  }
+  .headerWrap{
+    margin: 0 20px;
+    justify-content: space-between;
+  }
+  .mobile_icon{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 4;
+    float: right;
+    margin: 17px 20px 0 0;
+  }
+  .show {
+    display: block;
+  }
+  .hiddenOverflow{
+    overflow: hidden;
+  }
+  .mobileMenu{
+    position: absolute;
+    margin: 0;
+    padding: 17px 0 0 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 3;
+  }
+  
+
+  .mobileMenu li:nth-child(2){
+    margin-top: 100px;
+  }
+  .mobileMenu li{
+    padding: 25px 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .mobileMenu li:hover {
+    border-right: #F03033 solid 5px;
+    border-left: #F03033 solid 5px;
+  }
+}
+
+
+  @font-face {
+	font-family: NotoSansRegular;
+	src: url('fonts/NotoSansRegular.ttf');
+}
